@@ -28,11 +28,12 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+  count is local to the counter1 function and global for counter2; every time you run counter1, count will reset whereas count will keep adding to itself when you run counter2
   2. Which of the two uses a closure? How can you tell?
-  
+  counter2, because the function references and returns a variable outside of the function
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+  counter1 could be preferable if you are trying to  mark individual instances of something, counter2 could be useful if you are trying to tabulate something that multiple functions impact
 */
 
 // counter1 code
